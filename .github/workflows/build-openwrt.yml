@@ -140,7 +140,7 @@ jobs:
          cp -Rf build/${{matrix.target}}/diy/* ./
         fi
         [ -e build/${{matrix.target}}/$CONFIG_FILE ]
-        mv build/${{matrix.target}}/$CONFIG_FILE .config
+        mv build/${{matrix.target}}/$CONFIG_FILE Lede.config
         make defconfig
         git clone https://github.com/openwrt-dev/po2lmo.git
         pushd po2lmo
